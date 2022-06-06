@@ -45,8 +45,8 @@ func (m *Mouse) Hole() {
 
 func (m *Mouse) Steal() {
 	log.Println(m.Name(), "steal")
-	max := constant.Gi
-	for len(m.buffer)*constant.Mi < max {
-		m.buffer = append(m.buffer, [constant.Mi]byte{})
-	}
+	//max := constant.Gi
+	//for len(m.buffer)*constant.Mi < max {
+	//	m.buffer = append(m.buffer, [constant.Mi]byte{})
+	//}
 }

@@ -2,8 +2,6 @@ package wolf
 
 import (
 	"log"
-	"sync"
-	"time"
 )
 
 type Wolf struct {
@@ -29,11 +27,11 @@ func (w *Wolf) Eat() {
 
 func (w *Wolf) Drink() {
 	log.Println(w.Name(), "drink")
-	for i := 0; i < 10; i++ {
-		go func() {
-			time.Sleep(30 * time.Second)
-		}()
-	}
+	//for i := 0; i < 10; i++ {
+	//	go func() {
+	//		time.Sleep(30 * time.Second)
+	//	}()
+	//}
 }
 
 func (w *Wolf) Shit() {
@@ -51,11 +49,11 @@ func (w *Wolf) Run() {
 func (w *Wolf) Howl() {
 	log.Println(w.Name(), "howl")
 
-	m := &sync.Mutex{}
-	m.Lock()
-	go func() {
-		time.Sleep(time.Second)
-		m.Unlock()
-	}()
-	m.Lock()
+	//m := &sync.Mutex{}
+	//m.Lock()
+	//go func() {
+	//	time.Sleep(time.Second)
+	//	m.Unlock()
+	//}()
+	//m.Lock()
 }
